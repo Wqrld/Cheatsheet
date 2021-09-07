@@ -45,5 +45,9 @@ iptables -A INPUT -p tcp -m multiport --dports http,https -j DROP
 ip6tables -A INPUT -p tcp -m multiport --dports http,https -j DROP
 
 
+## Visual Studio shortcuts
+ctrl-k ctrl-D format document
 
+ctrl-k ctrl-c comment
 
+ctrl-k ctr-u uncomment

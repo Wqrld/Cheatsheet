@@ -51,3 +51,9 @@ ctrl-k ctrl-D format document
 ctrl-k ctrl-c comment
 
 ctrl-k ctr-u uncomment
+
+## Visual studio C warnings
+```c
+#pragma warning(disable: 6031) // getchar return value
+#pragma warning(disable: 4996) // we want scanf instead of scanf_s
+```

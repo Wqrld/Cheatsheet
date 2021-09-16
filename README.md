@@ -57,3 +57,13 @@ ctrl-k ctr-u uncomment
 #pragma warning(disable: 6031) // getchar return value
 #pragma warning(disable: 4996) // we want scanf instead of scanf_s
 ```
+
+## C clear getchar buffer
+```c
+int c = 0;
+	while (c != '\n') {
+		c = getchar();
+	}
+	getchar();
+
+```

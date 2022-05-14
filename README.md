@@ -10,7 +10,14 @@ sender:
 receiver:
 `nc -l 3245 | unpigz -vvv | tar -x`
 
-Can pull about a full uplink
+Can pull about a full uplink depending on the system
+
+non compressed version:
+sender:
+`tar -c daemon-data | nc $IP 3246`
+
+receiver:
+`nc -l 3246 | tar -x`
 
 ## Docker pushing invalid packets with spoofed source ips
 Preventing this is handy enough by the way, just add this to your forwarding chain in iptables and it'll drop that kinda stuff. iptables -I FORWARD -m conntrack --ctstate INVALID -j DROP
